@@ -1,0 +1,866 @@
+/*  */
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype"); 
+    font-style: normal; 
+    font-weight: bold;
+} 
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Light.otf") format("opentype"); 
+    font-style: normal; 
+    font-weight: normal;
+} 
+
+/*  */
+
+.transition {
+    transition: 0.5s;
+}
+
+/*  */
+
+body {
+    background: url("../images/bg.png") no-repeat top center;
+    background-size: cover;
+    font-family: "Gilroy";
+    font-size: 15px;
+    color: #fff;
+    overflow-x: hidden;
+
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+
+    /* outline: 1px solid #cc0000; */
+}
+
+body.home {
+    background: url("../images/home-bg.png") no-repeat top center, 
+                url("../images/bg.png") repeat-x top center;
+    /* background-size: contain; */
+}
+
+body.howtoplay {
+    background: url("../images/htp-bg.png") no-repeat top center, 
+                url("../images/bg.png") repeat-x top center;
+}
+
+body.donate {
+    background: url("../images/donate-bg.png") no-repeat top center, 
+                url("../images/bg.png") repeat-x top center;
+}
+
+body.about {
+    background: url("../images/about-bg.png") no-repeat top center, 
+                url("../images/bg.png") repeat-x top center;
+}
+
+ul.nav-menu {
+    list-style: none;
+    width: 620px;
+    min-height: 22px;
+    margin: 0 auto;
+    margin-top: 43px;
+}
+
+ul.nav-menu li {
+    background: transparent no-repeat center bottom;
+    float: left;
+}
+
+ul.nav-menu li a {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px;
+    padding: 15px 0px;
+    text-transform: uppercase;
+}
+
+ul.nav-menu li a i.icon-vk {
+    display: inline-block;
+    background: url("../images/icons/vk.png") no-repeat center;
+    background-size: contain;
+    width: 19px;
+    height: 11px;
+    margin-top: 3px;
+}
+
+ul.nav-menu li.active,
+ul.nav-menu li:hover,
+ul.nav-menu li:focus {
+    background-image: url("../images/menu-border.png");
+    margin-top: -5px;
+    padding-bottom: 8px;
+}
+
+header {
+    position: relative;
+    z-index: 20;
+}
+
+header .logo {
+    display: inline-block;
+    background: url("../images/logo.png") no-repeat center;
+    width: 237px;
+    height: 100px;
+}
+
+header ul.nav-menu {
+    float: right;
+}
+
+main {
+    position: relative;
+    z-index: 19;
+
+    /* top: -104px; */
+    /* padding-top: 164px; */
+    padding-top: 60px;
+}
+
+main.home {
+    /* background: url("../images/home-bg.png") no-repeat center top; */
+}
+
+main.home .video-block {
+    position: relative;
+    width: 1187px;
+    height: 602px;
+    margin: 0 auto;
+    left: -140px;
+}
+
+main.home .video-block .santa {
+    display: inline-block;
+    background: url("../images/santa.png") no-repeat center;
+    width: 620px;
+    height: 602px;
+    position: relative;
+    z-index: 25;
+}
+
+main.home .video-block .video {
+    display: inline-block;
+    position: absolute;
+    z-index: 22;
+    background: url("../images/video-bg.png") no-repeat center;
+    width: 710px;
+    height: 395px;
+    left: 446px;
+    top: 79px;
+
+    -webkit-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+}
+
+main.home .video-block .video a.play-video {
+    display: inline-block;
+    position: absolute;
+    z-index: 23;
+    background: url("../images/video-play.png") no-repeat center;
+    width: 710px;
+    height: 395px;
+}
+
+main.home a.start-play {
+    display: block;
+    background: #fff;
+    margin: 0 auto;
+    width: 283px;
+    height: 43px;
+    text-align: center;
+    text-decoration: none;
+    color: #3486d5;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding-top: 17px;
+
+    -webkit-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.25);
+}
+
+main.home .servers {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 140px;
+    width: 920px;
+    height: 850px;
+}
+
+main.home .servers > p {
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    text-transform: uppercase;
+    background: url("../images/servers/text.png") no-repeat center;
+    position: relative;
+    top: 626px;
+}
+
+main.home .servers .trees {
+    position: relative;
+    text-align: left;
+}
+
+main.home .servers .trees a {
+    display: inline-block;
+    position: absolute;
+    z-index: 30;
+    opacity: 0.9;
+}
+
+main.home .servers .trees a:nth-child(1) {
+    background: url("../images/servers/2.png") no-repeat center;
+    width: 470px;
+    height: 562px;
+    top: 172px;
+}
+
+main.home .servers .trees a:nth-child(2) {
+    background: url("../images/servers/1.png") no-repeat center;
+    width: 596px;
+    height: 654px;
+    left: 180px;
+    text-align: center;
+    z-index: 31;
+    opacity: 1;
+}
+
+main.home .servers .trees a:nth-child(3) {
+    background: url("../images/servers/3.png") no-repeat center;
+    width: 468px;
+    height: 563px;
+    left: 505px;
+    top: 179px;
+}
+
+main.home .servers .trees a p {
+    position: relative;
+    color: #3da5e6;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main.home .servers .trees a:nth-child(1) p {
+    -webkit-transform: rotate(-21deg);
+    -moz-transform: rotate(-21deg);
+    -o-transform: rotate(-21deg);
+    -ms-transform: rotate(-21deg);
+    transform: rotate(-21deg);
+    top: 328px;
+    left: 123px;
+    font-size: 18px;
+}
+
+main.home .servers .trees a:nth-child(2) p {
+    top: 502px;
+}
+
+main.home .servers .trees a:nth-child(3) p {
+    -webkit-transform: rotate(19deg);
+    -moz-transform: rotate(19deg);
+    -o-transform: rotate(19deg);
+    -ms-transform: rotate(19deg);
+    transform: rotate(19deg);
+    top: 430px;
+    left: 184px;
+    font-size: 18px;
+}
+
+main.home .social-block {
+    position: relative;
+    width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 145px;
+}
+
+main.home .social-block .logo {
+    display: inline-block;
+    position: relative;
+    background: url("../images/just-logo.png") no-repeat center;
+    width: 115px;
+    height: 147px;
+    margin: 0px 20px;
+    top: 60px;
+}
+
+main.home .social-block .group {
+    display: inline-block;
+}
+
+main.home .social-block .group h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+main.home .social-block .group p {
+    font-size: 28px;
+    font-weight: normal;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 8px 0;
+    padding: 0;
+}
+
+main.home .social-block .group a {
+    display: block;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    width: 208px;
+    height: 27px;
+    padding-top: 12px;
+}
+
+main.home .social-block .group a i.vk {
+    display: inline-block;
+    background: url("../images/icons/vk.png") no-repeat center;
+    background-size: contain;
+    width: 19px;
+    height: 11px;
+    margin-top: 3px;
+}
+
+main.home .social-block .group a:hover {
+    background: #fff;
+    color: #45a3f4;
+}
+
+main.home .social-block .group a:hover i.vk {
+    background-image: url("../images/icons/vk-hover.png");
+}
+
+main.home .social-block .group:nth-child(1) {
+    text-align: right;
+}
+
+main.home .social-block .group:nth-child(1) a {
+    float: right;
+}
+
+main.home .social-block .group:nth-child(3) {
+    text-align: left;
+}
+
+main.home .social-block .group:nth-child(3) a {
+    float: left;
+}
+
+main.howtoplay {
+    padding-top: 0px;
+
+    background: url("../images/cballs.png") no-repeat top center;
+}
+
+main.howtoplay .steps {
+    position: relative;
+    padding-top: 268px;
+    /* left: -108px; */
+} 
+
+main.howtoplay .steps .step {
+
+}
+
+main.howtoplay .steps .step:nth-child(1) {
+    padding-left: 395px;
+    /* background: url("../images/cball-1.png") no-repeat left center;
+    color: #fff;
+    padding: 284px 0px;
+    padding-left: 520px;
+    position: relative;
+    width: 721px;
+    text-align: left; */
+}
+
+main.howtoplay .steps .step:nth-child(2) {
+    text-align: right;
+    padding-right: 415px;
+    padding-top: 257px;
+    /* background: url("../images/cball-2.png") no-repeat right center;
+    color: #fff;
+    padding: 292px 0px 351px;
+    padding-right: 513px;
+    position: relative;
+    padding-left: 85px;
+    margin-top: -280px;
+    left: 235px;
+    text-align: right; */
+}
+
+main.howtoplay .steps .step:nth-child(3) {
+    padding-top: 326px;
+    padding-left: 480px;
+    padding-bottom: 100px;
+    /* background: url("../images/cball-3.png") no-repeat left center;
+    color: #fff;
+    padding: 284px 0px;
+    padding-left: 520px;
+    position: relative;
+    width: 721px;
+    text-align: left; */
+}
+
+main.howtoplay .steps .step h3 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+main.howtoplay .steps .step p {
+    font-size: 25px;
+    color: #fff;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+    margin: 18px 0;
+}
+
+main.howtoplay .steps .step a {
+    display: inline-block;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    width: 200px;
+    height: 27px;
+    padding-top: 12px;
+    margin-right: 9px;
+}
+
+main.howtoplay .steps .step a i.cloud {
+    display: inline-block;
+    background: url("../images/icons/cloud.png") no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 18px;
+    margin-top: 0px;
+    margin-bottom: -4px;
+}
+
+main.howtoplay .steps .step a:hover,
+main.howtoplay .steps .step a:focus {
+    background: #fff;
+    color: #45a3f4;
+}
+
+main.howtoplay .steps .step a:hover i.cloud,
+main.howtoplay .steps .step a:focus i.cloud {
+    background-image: url("../images/icons/cloud-hover.png");
+}
+
+main.donate {
+    text-align: center;
+}
+
+main.donate .form {
+    background: rgba(255, 255, 255, 0.14);
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 50px 0px;
+    margin-top: 200px;
+
+    -webkit-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.32);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.32);
+}
+
+main.donate .form h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+main.donate .form input,
+main.donate .form select {
+    display: block;
+    max-width: 442px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 49px auto;
+
+    -webkit-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.32);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.32);
+}
+
+main.donate .form select {
+    width: 442px;
+    background: #fff url("../images/icons/server.png") no-repeat 15px center;
+    color: #5ea0d9;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 11px 0px;
+    padding-left: 60px;
+}
+
+main.donate .form input {
+    width: 382px;
+    background: #fff url("../images/icons/nick.png") no-repeat 15px center;
+    color: #5ea0d9;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 11px 0px;
+    padding-left: 60px;
+}
+
+main.donate .form input::-webkit-input-placeholder,
+main.donate .form input::-moz-placeholder,
+main.donate .form input:-moz-placeholder,
+main.donate .form input:-ms-input-placeholder {
+    color: #5ea0d9;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main.donate .form input.nick {
+    background-image: url("../images/icons/nick.png");
+}
+
+main.donate .form input.sum {
+    background-image: url("../images/icons/money.png");
+}
+
+main.donate .form input[type=checkbox] {
+    display: none;
+}
+
+main.donate .form input[type=checkbox] + label {
+    background: url("../images/icons/not-checked.png") no-repeat 0px center;
+    padding-left: 30px;
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor:pointer;
+    height: 20px;
+}
+
+main.donate .form input[type=checkbox]:checked + label { background-image: url("../images/icons/checked.png"); }
+main.donate .form label { background-image: url("../images/icons/not-checked.png"); }
+
+main.donate .form .form-footer {
+    padding-top: 10px;
+    padding: 10px 55px;
+}
+
+main.donate .form .form-footer a {
+    display: inline-block;
+    position: relative;
+}
+
+main.donate .form .form-footer a.sale {
+    background: url("../images/icons/sale.png") no-repeat center;
+    width: 53px;
+    height: 53px;
+    float: left;
+}
+
+main.donate .form .form-footer a.sale p {
+    position: absolute;
+    background: #e01c30;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;    
+    padding: 3px;
+    width: 20px;
+    top: -6px;
+    right: -6px;
+}
+
+main.donate .form .form-footer a.help {
+    background: url("../images/icons/help.png") no-repeat center;
+    width: 51px;
+    height: 51px;
+    float: right;
+}
+
+main.donate .form .form-footer button {
+    display: inline-block;
+    background: #e01c30;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding: 9px 65px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+main.donate .form .form-footer button i.shop {
+    display: inline-block;
+    background: url("../images/icons/shop-cart.png") no-repeat center;
+    width: 25px;
+    height: 23px;
+    margin-bottom: -3px;
+}
+
+main.donate .form a {
+    color: #fff;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+main.about {
+    margin-top: 300px;
+}
+
+main.about .logo {
+    position: relative;
+    display: inline-block;
+    background: url("../images/big-logo.png") no-repeat center;
+    width: 262px;
+    height: 338px;
+}
+
+main.about .right-block {
+    position: relative;
+    width: 586px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 120px;
+}
+
+main.about .text-container {
+    position: relative;
+    width: 586px;
+    height: 275px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    overflow-x: auto;
+    margin: 20px 0px
+}
+
+main.about a {
+    display: block;
+    background: url("../images/icons/scroll-up.png") no-repeat center;
+    width: 25px;
+    height: 15px;
+    margin: 0 auto;
+}
+
+main.about a.scroll-down {
+    background-image: url("../images/icons/scroll-down.png");
+}
+
+main.about .text-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+footer {
+    position: relative;
+    z-index: 20;
+    margin-top: 560px;
+    margin-bottom: 30px;
+}
+
+body.howtoplay footer {
+    margin-top: 266px;
+}
+
+body.donate footer {
+    margin-top: 226px;
+}
+
+body.about footer {
+    margin-top: 343px;
+}
+
+footer .copyright {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.candies {
+    position: relative;
+}
+
+.candy {
+    display: block;
+    background: url("../images/candy/type-1.png") no-repeat center;
+    width: 324px;
+    height: 440px;
+    position: absolute;
+    transition: 1s ease;
+}
+
+.candy.candy-1 {
+    background-image: url("../images/candy/type-1.png");
+    width: 324px;
+    height: 440px;
+    top: 120px;
+    right: 27px;
+}
+
+.candy.candy-2 {
+    background-image: url("../images/candy/type-2.png");
+    width: 120px;
+    height: 66px;
+    top: 120px;
+    right: 600px
+}
+
+.candy.candy-3 {
+    background-image: url("../images/candy/type-3.png");
+    width: 223px;
+    height: 161px;
+    top: 250px;
+    left: 250px;
+}
+
+.candy.candy-5 {
+    background-image: url("../images/candy/type-5.png");
+    width: 55px;
+    height: 90px;
+    top: 1047px;
+    right: 250px;
+}
+
+.candy.candy-6 {
+    background-image: url("../images/candy/type-6.png");
+    width: 217px;
+    height: 178px;
+    top: 1047px;
+    left: 250px;
+}
+
+.candy.candy-7 {
+    background-image: url("../images/candy/type-7.png");
+    width: 281px;
+    height: 269px;
+    top: 2200px;
+    left: 250px;
+    opacity: 0.3;
+}
+
+/*  */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.71);
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    text-align: center;
+}
+
+.modal a.modal-close {
+    display: inline-block;
+    position: absolute;
+    background: url("../images/icons/close.png") no-repeat center;
+    width: 19px;
+    height: 20px;
+    right: 92px;
+    top: 250px;
+}
+
+.modal .modal-content {
+    position: relative;
+    background: url("../images/modal-bg.png") no-repeat center;
+    width: 781px;
+    height: 386px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 258px;
+    margin-top: 30px;
+    padding-left: 156px;
+}
+
+.modal .modal-content h4 {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.modal .modal-content p {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+    text-transform: uppercase;
+}
